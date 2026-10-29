@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:3001
+
+# Produtos
+GET {{baseUrl}}/produtos/id
+
+###
+POST  {{baseUrl}}/produtos
+Content-Type: application/json
+
+{
+    "nome": "",
+    "descricao": "",
+    "preco": 
+}
+###
+
+PATCH {{baseUrl}}/produtos/1
+Content-Type: application/json
+
+{
+    "nome": "",
+    "descricao": "",
+    "preco":
+}

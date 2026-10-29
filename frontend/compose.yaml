@@ -1,0 +1,26 @@
+include:
+  - path: ../backend/compose.yaml
+    env_file: ../backend/.env
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - frontend_next:/app/.next
+    depends_on:
+      backend:
+        condition: service_started
+
+volumes:
+  frontend_next:
