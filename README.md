@@ -1,8 +1,8 @@
 First of all, use both in fronted and backend:
 
-´´´
+```
 npm install
-´´´
+``` 
 
 Use it in the first time in the frontend to build and run the application:
 ```
